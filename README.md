@@ -2,7 +2,9 @@
 
 This is a script to download podcast audio files -- MP3, M4A, etc -- from a collection of feeds, without a dedicated podcast app. It will put files in a `podcasts` folder. You can then copy those files onto the player of your choice.
 
-This works because pocasting is still based on the open RSS standard, and files are hosted on public servers. This is what your podcast player is doing under the hood.
+This all works because pocasting is still based on the open RSS standard, and files are hosted on public servers. This is what your podcast player is doing under the hood.
+
+I've written this with the assumption that you're using it on an Apple computer and running commands by clicking things in Finder. You can also run the scripts here from Terminal. Both should work the same. The instructions below are mostly for Finder.
 
 ## Caveat Emptor
 
@@ -12,7 +14,11 @@ The author of this script is not responsible for anything that goes wrong. Use a
 
 ## Usage
 
-To subscribe to feeds, you'll need the RSS link for the podcast of your choice. I've included three my oldest likes -- [But Why](https://www.npr.org/podcasts/474377890/but-why-a-podcast-for-curious-kids), [Circle Round](https://www.wbur.org/podcasts/circleround) and [Million Bazillion](https://www.marketplace.org/shows/million-bazillion/). A URL for each feed goes on its own line in `feeds.txt`, like this:
+Download this repository and unpack it somewhere, like your desktop.
+
+### Podcast feeds
+
+To subscribe to feeds, you'll need the RSS link for the podcast of your choice. I've included three that my kids like -- [But Why](https://www.npr.org/podcasts/474377890/but-why-a-podcast-for-curious-kids), [Circle Round](https://www.wbur.org/podcasts/circleround) and [Million Bazillion](https://www.marketplace.org/shows/million-bazillion/). A URL for each feed goes on its own line in `feeds.txt`, like this:
 
 ```
 https://podcasts.vpr.net/but-why
@@ -41,6 +47,6 @@ Different players are going to need files in different places. On mine, there's 
 
 ## Backstory
 
-I bought a [SanDisk Clip Player](https://a.co/d/drfuW2D) to let my kids have their own podcasts in the car. However, it needs actual MP3 files and has connection to the internet, and most of the podcasting ecosystem has moved toward native apps like Apple Podcasts or Overcast.
+I bought a [SanDisk Clip Player](https://a.co/d/drfuW2D) to let my kids have their own podcasts in the car. However, it needs actual MP3 files and has no connection to the internet, and most of the podcasting ecosystem has moved toward native apps like Apple Podcasts or Overcast.
 
 Downloading podcasts, getting to the actual files and giving them sensible names turns out to be [more difficult than it should be](https://discussions.apple.com/thread/254493062). This is an effort to fix that problem, without building a new, full-fledged desktop application.
