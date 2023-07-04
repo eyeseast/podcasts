@@ -50,4 +50,9 @@ def save(href: str, title: str, output_dir: pathlib.Path):
 if __name__ == "__main__":
     feeds_file = pathlib.Path(sys.argv[1])
     output_dir = pathlib.Path(sys.argv[2])
-    main(feeds_file, output_dir)
+
+    try:
+        main(feeds_file, output_dir)
+    except KeyboardInterrupt:
+        print("Exiting.")
+        sys.exit(0)
