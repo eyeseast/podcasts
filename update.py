@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 
+import os
 import pathlib
 import sys
 from urllib.request import urlretrieve
 
 import feedparser
 from slugify import Slugify
+
+try:
+    DOWNLOAD_LIMIT = int(os.environ.get("PODCAST_DOWNLOAD_LIMIT", 10))
+except ValueError:
+    DOWNLOAD_LIMIT = 10
 
 slugify = Slugify(separator="_", to_lower=False)
 

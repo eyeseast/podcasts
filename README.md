@@ -28,6 +28,13 @@ Double click the `Install.command` icon. This will open a Terminal window and ru
 
 Double click the `Update.command` icon. This will open another Terminal window and run another script. This will read through the URLs in `feeds.txt`, find each audio file and download it to a `podcasts` folder in this directory. Each file is named with the episode title.
 
+By default, the script downloads the 10 most recent episodes. To change this limit, set an environment variable `PODCAST_DOWNLOAD_LIMIT` to a number and run the script from the command line.
+
+```sh
+PODCAST_DOWNLOAD_LIMIT=20
+python3 ./update.py feeds.txt podcasts
+```
+
 ### Copy files to your player
 
 Different players are going to need files in different places. On mine, there's a `podcasts` folder. I copy all my new files into it, and that's it. Yours might be different. When in doubt, read the instructions.
