@@ -29,7 +29,7 @@ def download_feed(url: str, output_dir: pathlib.Path):
     feed = feedparser.parse(url)
     print(f"Found podcast: {feed.feed.title}")
 
-    for entry in feed.entries:
+    for entry in feed.entries[:DOWNLOAD_LIMIT]:
         print(f"Downloading episode: {entry.title}")
         if not entry.get("enclosures"):
             print("No enclosures. Skipping.")
